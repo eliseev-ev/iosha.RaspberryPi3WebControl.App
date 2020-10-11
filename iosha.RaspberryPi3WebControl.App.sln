@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30406.217
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iosha.RaspberryPi3WebControl.App", "iosha.RaspberryPi3WebControl.App\iosha.RaspberryPi3WebControl.App.csproj", "{EA247CF7-0655-44F8-B980-2512A8AB7B59}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iosha.RaspberryPi3WebControl", "iosha.RaspberryPi3WebControl\iosha.RaspberryPi3WebControl.csproj", "{89317964-CC4C-4061-9509-B578077F984B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		arm|Any CPU = arm|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EA247CF7-0655-44F8-B980-2512A8AB7B59}.arm|Any CPU.ActiveCfg = arm|Any CPU
+		{EA247CF7-0655-44F8-B980-2512A8AB7B59}.arm|Any CPU.Build.0 = arm|Any CPU
+		{EA247CF7-0655-44F8-B980-2512A8AB7B59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA247CF7-0655-44F8-B980-2512A8AB7B59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA247CF7-0655-44F8-B980-2512A8AB7B59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA247CF7-0655-44F8-B980-2512A8AB7B59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89317964-CC4C-4061-9509-B578077F984B}.arm|Any CPU.ActiveCfg = Debug|Any CPU
+		{89317964-CC4C-4061-9509-B578077F984B}.arm|Any CPU.Build.0 = Debug|Any CPU
+		{89317964-CC4C-4061-9509-B578077F984B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89317964-CC4C-4061-9509-B578077F984B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89317964-CC4C-4061-9509-B578077F984B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89317964-CC4C-4061-9509-B578077F984B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3E5CC47C-7AFB-4D86-9EE4-A7F4C0BED0BA}
+	EndGlobalSection
+EndGlobal

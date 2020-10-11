@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Configurations>Debug;Release;arm</Configurations>
+    <UserSecretsId>708cffae-9e13-4bba-9fcf-ebf406102c4c</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\iosha.RaspberryPi3WebControl\iosha.RaspberryPi3WebControl.csproj" />
+  </ItemGroup>
+
+
+</Project>
