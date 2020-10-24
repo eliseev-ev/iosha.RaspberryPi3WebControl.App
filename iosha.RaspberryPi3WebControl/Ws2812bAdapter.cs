@@ -10,6 +10,7 @@ namespace iosha.RaspberryPi3WebControl
         private readonly Ws2812b _ledTape;
         private readonly Iot.Device.Graphics.BitmapImage _image;
         private readonly int _count;
+        public int PixelCount => _count;
 
         public Ws2812bAdapter(IOptions<LedOptions> options) 
         {
@@ -17,17 +18,18 @@ namespace iosha.RaspberryPi3WebControl
 
             var settings = new SpiConnectionSettings(0, 0)
             {
-                ClockFrequency = 2_400_000,
+                ClockFrequency = 2_800_000,
                 Mode = SpiMode.Mode0,
                 DataBitLength = 8
             };
 
             var spi = SpiDevice.Create(settings);
             _ledTape = new Ws2812b(spi, _count);
+
             _image = _ledTape.Image;
         }
 
-        public void SetAll(Color color)
+        public void SetAllPixels(Color color)
         {
             for (int i = 0; i < _count; i++)
                 _image.SetPixel(i, 0, color);
@@ -41,6 +43,12 @@ namespace iosha.RaspberryPi3WebControl
         public void Update()
         {
             _ledTape.Update();
+        }
+
+        public void Clear()
+        {
+            SetAllPixels(Color.Black);
+            Update();
         }
     }
 }

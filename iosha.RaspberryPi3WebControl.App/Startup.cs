@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using iosha.RaspberryPi3WebControl.Storage;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -25,6 +26,10 @@ namespace iosha.RaspberryPi3WebControl.App
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            services.AddEntityFrameworkSqlite().AddDbContext<RaspberryPi3WebControlDbContext>();
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -35,7 +40,10 @@ namespace iosha.RaspberryPi3WebControl.App
                 app.UseDeveloperExceptionPage();
             }
 
-            
+            using (var client = new RaspberryPi3WebControlDbContext())
+            {
+                client.Database.EnsureCreated();
+            }
 
             app.UseRouting();
 

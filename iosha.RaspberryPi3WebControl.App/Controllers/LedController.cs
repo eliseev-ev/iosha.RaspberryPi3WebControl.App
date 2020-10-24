@@ -12,21 +12,37 @@ namespace iosha.RaspberryPi3WebControl.App.Controllers
     [ApiController]
     public class LedController : ControllerBase
     {
-        private readonly IWs2812bAdapter _ws2812bAdapter;
+        private readonly IWs2812bManager _ws2812bManger;
 
-        public LedController(IWs2812bAdapter ws2812BAdapter)
+        public LedController(IWs2812bManager ws2812bManger)
         {
-            _ws2812bAdapter = ws2812BAdapter;
+            _ws2812bManger = ws2812bManger;
         }
 
-        [HttpGet]
-        public async Task<IActionResult> ChangeColor()
+
+        [HttpGet("automode")]
+        public async Task<IActionResult> Automode()
+        {
+            _ws2812bManger.SetAutomode(!_ws2812bManger.IsAutomode);
+            return Ok();
+        }
+
+        [HttpGet("{red}/{green}/{blue}")]
+        public async Task<IActionResult> SetCustomColor(byte red, byte green, byte blue)
+        {
+            var color = Color.FromArgb(red, green, blue);
+
+            _ws2812bManger.SetAllPixels(color);
+            return Ok();
+        }
+
+        [HttpGet("random")]
+        public async Task<IActionResult> SetCustomColor()
         {
             var random = new Random();
-            var color = Color.FromArgb(random.Next(256), random.Next(256), random.Next(256));
+            var color = Color.FromArgb(random.Next(255), random.Next(255), random.Next(255));
 
-            _ws2812bAdapter.SetAll(color);
-            _ws2812bAdapter.Update();
+            _ws2812bManger.SetAllPixels(color);
             return Ok();
         }
     }

@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30406.217
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iosha.RaspberryPi3WebControl.App", "iosha.RaspberryPi3WebControl.App\iosha.RaspberryPi3WebControl.App.csproj", "{EA247CF7-0655-44F8-B980-2512A8AB7B59}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iosha.RaspberryPi3WebControl.App", "iosha.RaspberryPi3WebControl.App\iosha.RaspberryPi3WebControl.App.csproj", "{EA247CF7-0655-44F8-B980-2512A8AB7B59}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iosha.RaspberryPi3WebControl", "iosha.RaspberryPi3WebControl\iosha.RaspberryPi3WebControl.csproj", "{89317964-CC4C-4061-9509-B578077F984B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iosha.RaspberryPi3WebControl", "iosha.RaspberryPi3WebControl\iosha.RaspberryPi3WebControl.csproj", "{89317964-CC4C-4061-9509-B578077F984B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iosha.RaspberryPi3WebControl.Storage", "iosha.RaspberryPi3WebControl.Storage\iosha.RaspberryPi3WebControl.Storage.csproj", "{F749EB6F-931D-481D-9832-15019CAEBFC9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,6 +28,12 @@ Global
 		{89317964-CC4C-4061-9509-B578077F984B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{89317964-CC4C-4061-9509-B578077F984B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{89317964-CC4C-4061-9509-B578077F984B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F749EB6F-931D-481D-9832-15019CAEBFC9}.arm|Any CPU.ActiveCfg = Debug|Any CPU
+		{F749EB6F-931D-481D-9832-15019CAEBFC9}.arm|Any CPU.Build.0 = Debug|Any CPU
+		{F749EB6F-931D-481D-9832-15019CAEBFC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F749EB6F-931D-481D-9832-15019CAEBFC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F749EB6F-931D-481D-9832-15019CAEBFC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F749EB6F-931D-481D-9832-15019CAEBFC9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -31,8 +31,9 @@ namespace iosha.RaspberryPi3WebControl.App
                              context.Configuration.GetSection("LedOptions"));
 
                         services.AddSingleton<IWs2812bAdapter, Ws2812bAdapter>();
+                        services.AddSingleton<IWs2812bManager, Ws2812bManager>();
 
-                    });                
+                    });
                 });
     }
 }
